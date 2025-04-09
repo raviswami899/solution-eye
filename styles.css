@@ -5,6 +5,7 @@
 }
 
 body {
+    padding: 20px;
     overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overscroll-behavior-y: none;
@@ -15,40 +16,38 @@ html {
 }
 
 /* Section Base Styles */
-.section {
-    min-height: 100vh;
+section {
     position: relative;
-    padding: 80px 0;
+    padding: 20px 0;
     overflow: hidden;
 }
 
-.section {
-    padding: 4rem 0;
-    margin: 2rem 0;
+section {
+    padding: 1rem 0;
+    margin: 1rem 0;
     overflow: visible;
 }
 
 @media (min-width: 992px) {
-    .section {
-        padding: 6rem 0;
-        margin: 3rem 0;
+    section {
+        padding: 1rem 0;
+        margin: 2rem 0;
     }
 }
 .section-curve {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
     width: 100%;
     height: 100px;
-    background: #ffffff;
-    border-radius: 50% 50% 0 0;
+    background: #f3f3f3;
+    border-radius: 0 0 50% 50%;
     transform: scaleX(1.2);
 }
 
 /* Section 1 Styles */
 .product-image {
-    animation: float 3s ease-in-out infinite;
+    max-height: 500px;
+    animation: float 5s ease-in-out;
 }
+
 
 @keyframes float {
     0%, 100% { 
@@ -175,16 +174,7 @@ html {
 }
 
 
-/* Content-based height */
-.content-fit {
-    min-height: fit-content;
-    height: auto;
-    padding: 4rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-}
+
 
 /* Responsive content height */
 @media (min-width: 992px) {
@@ -208,3 +198,94 @@ html {
 }
 
 
+.whatsapp-fab{
+    padding: 12px;
+    margin-bottom: 12px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+.whatsapp-fab:hover {
+    transform: scale(1.1);
+}
+/* Section 4 Styles */
+.installation-section {
+    background: linear-gradient(to bottom left, #f8f9fa, #ffffff);
+}
+
+.installation-video-container {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.installation-steps {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease;
+}
+
+.step-item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #0071e3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #1d1d1f;
+}
+
+.step-description {
+    color: #86868b;
+    margin-bottom: 0;
+}
+
+/* Animation Triggers */
+.section-visible#section4 .installation-video-container,
+.section-visible#section4 .installation-steps {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-visible#section4 .step-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-visible#section4 .step-item:nth-child(1) { transition-delay: 0.2s; }
+.section-visible#section4 .step-item:nth-child(2) { transition-delay: 0.4s; }
+.section-visible#section4 .step-item:nth-child(3) { transition-delay: 0.6s; }
+.section-visible#section4 .step-item:nth-child(4) { transition-delay: 0.8s; }
+
+/* Hover Effects */
+.step-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}

@@ -78,3 +78,5 @@ $(document).ready(function(){
         }, 900, 'swing');
     });
 });
+
+// Add to YouTube API integration
