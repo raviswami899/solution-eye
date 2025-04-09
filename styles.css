@@ -124,23 +124,6 @@ section {
     transition: all 0.4s ease;
 }
 
-/* Animation Triggers */
-.section-visible .showcase-image,
-.section-visible .rating-container,
-.section-visible .about-content,
-.section-visible .video-wrapper,
-.section-visible .feature-list li {
-    opacity: 1;
-    transform: none;
-}
-
-.section-visible .feature-list li:nth-child(1) { transition-delay: 0.4s; }
-.section-visible .feature-list li:nth-child(2) { transition-delay: 0.6s; }
-.section-visible .feature-list li:nth-child(3) { transition-delay: 0.8s; }
-
-/* Interactive Elements */
-.video-container:hover .play-overlay { opacity: 1; }
-.video-container:hover .play-button { transform: scale(1); }
 
 .buy-btn {
     background-color: #0071e3;
@@ -268,24 +251,47 @@ section {
 }
 
 /* Animation Triggers */
-.section-visible#section4 .installation-video-container,
-.section-visible#section4 .installation-steps {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.section-visible#section4 .step-item {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.section-visible#section4 .step-item:nth-child(1) { transition-delay: 0.2s; }
-.section-visible#section4 .step-item:nth-child(2) { transition-delay: 0.4s; }
-.section-visible#section4 .step-item:nth-child(3) { transition-delay: 0.6s; }
-.section-visible#section4 .step-item:nth-child(4) { transition-delay: 0.8s; }
 
 /* Hover Effects */
 .step-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
+
+
+/* Animation Triggers */
+.section-visible .showcase-image,
+.section-visible .rating-container,
+.section-visible .about-content,
+.section-visible .video-wrapper,
+.section-visible .feature-list li {
+    opacity: 1;
+    transform: none;
+}
+
+.section-visible .feature-list li:nth-child(1) { transition-delay: 0.4s; }
+.section-visible .feature-list li:nth-child(2) { transition-delay: 0.6s; }
+.section-visible .feature-list li:nth-child(3) { transition-delay: 0.8s; }
+
+/* Interactive Elements */
+.video-container:hover .play-overlay { opacity: 1; }
+.video-container:hover .play-button { transform: scale(1); }
+
+
+/* ---------------- */
+
+.section-visible .installation-video-container,
+.section-visible .installation-steps {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-visible .step-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-visible .step-item:nth-child(1) { transition-delay: 0.2s; }
+.section-visible .step-item:nth-child(2) { transition-delay: 0.4s; }
+.section-visible .step-item:nth-child(3) { transition-delay: 0.6s; }
+.section-visible .step-item:nth-child(4) { transition-delay: 0.8s; }
