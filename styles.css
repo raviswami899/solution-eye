@@ -182,8 +182,6 @@ section {
 
 
 .whatsapp-fab{
-    padding: 12px;
-    margin-bottom: 12px;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -359,7 +357,7 @@ section {
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    left: 30px;
+    right: 30px;
     background: #25D366;
     color: white !important;
     padding: 15px 20px;
@@ -391,6 +389,11 @@ section {
 
 .section-visible .whatsapp-float {
     opacity: 1;
+    transform: translateY(0);
+}
+
+.section-visible .whatsapp-fab{
+    opacity: 0;
     transform: translateY(0);
 }
 
