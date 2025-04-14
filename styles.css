@@ -713,3 +713,48 @@ section {
 
 
 
+/* Rounded corners & image zoom animation */
+img {
+    border-radius: 18px;
+    animation: zoomInOut 6s ease-in-out infinite;
+    transition: transform 0.4s ease;
+}
+
+/* Smooth zoom effect on hover (optional) */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Image breathing effect */
+@keyframes zoomInOut {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+/* Scroll animation for exiting sections */
+.section-leaving .section-heading,
+.section-leaving .product-image,
+.section-leaving .showcase-image,
+.section-leaving .about-content,
+.section-leaving .installation-image,
+.section-leaving .installation-video-container,
+.section-leaving .installation-steps,
+.section-leaving .step-item,
+.section-leaving .faq-item {
+    transform: translateY(-30px);
+    transition: transform 0.5s ease;
+}
+
+
+.section-visible .section-heading,
+.section-visible .product-image,
+.section-visible .showcase-image,
+.section-visible .about-content,
+.section-visible .installation-image,
+.section-visible .installation-video-container,
+.section-visible .installation-steps,
+.section-visible .step-item,
+.section-visible .faq-item {
+    transform: translateY(0);
+    opacity: 1;
+}

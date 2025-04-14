@@ -3,8 +3,10 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('section-visible');
+            entry.target.classList.remove('section-leaving');
         } else {
             entry.target.classList.remove('section-visible');
+            entry.target.classList.add('section-leaving');
             // Keep the class for the fourth section
             // const fourthSection = document.querySelectorAll('section')[3]; // index 3 = 4th element
             // if (entry.target !== fourthSection) {
