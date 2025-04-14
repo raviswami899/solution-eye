@@ -3,11 +3,18 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('section-visible');
-        } 
+        } else {
+            // Keep the class for the fourth section
+            const fourthSection = document.querySelectorAll('section')[3]; // index 3 = 4th element
+            if (entry.target !== fourthSection) {
+                entry.target.classList.remove('section-visible');
+            }
+        }
     });
 }, {
     threshold: 0.25
 });
+
 
 document.querySelectorAll('.parallax-section').forEach(section => {
     observer.observe(section);
