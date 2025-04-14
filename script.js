@@ -79,4 +79,44 @@ $(document).ready(function(){
     });
 });
 
+
+// Add this in your script section or JS file
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', function() {
+            // Toggle active class on clicked item
+            this.classList.toggle('active');
+            
+            // Close other open items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if(otherItem !== this) {
+                    otherItem.classList.remove('active');
+                }
+            });
+        });
+    });
+});
 // Add to YouTube API integration
+
+
+
+
+document.getElementById("langToggleBtn").addEventListener("click", function () {
+    const currentPage = window.location.pathname;
+    const isHindi = currentPage.includes("index_hin");
+
+    // Add a fade-out effect before switching
+    // document.body.style.transition = "opacity 0.5s";
+    // document.body.style.opacity = 0;
+
+    setTimeout(() => {
+        window.location.href = isHindi ? "index.html" : "index_hin.html";
+    }, 500);
+});
+
+
+window.addEventListener('load', () => {
+    document.body.style.opacity = 1;
+});
+

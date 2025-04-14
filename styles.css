@@ -660,3 +660,36 @@ section {
         margin-bottom: 2rem;
     }
 }
+
+
+
+
+
+.language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#langToggleBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#langToggleBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
+
