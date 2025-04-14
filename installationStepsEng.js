@@ -4,36 +4,49 @@ const installationSteps = [
         stepNumber: 1,
         title: "Mounting",
         description: [
-            "Install the unit in a weather-protected location near the motor starter."
+            "Install in a weather-protected location near the motor starter."
         ]
     },
     {
         stepNumber: 2,
-        title: "Wiring",
+        title: "Turn Off Power & Prepare Tools",
         description: [
-            "Switch off the 3 phase power or remove all 3 fuses.",
-            "Use proper tools for removing the fuse and connections. If you don’t have knowledge, please hire professionals.",
-            "Connect all 3 yellow wires to 3 phase terminals of the starter (R, Y, B) as per wiring diagram 1.",
-            "Connect 2 green wires on the green button of the starter or power-on button of the motor.",
-            "Connect 2 red wires on the red button series of the starter as per diagram 1 (Remove 1 wire from the red button and connect it to the device’s first red wire and connect the second wire to the red button of the device).",
-            "Fix the antenna firmly and make sure it does not touch any high voltage wires.",
-            "Insert any active SIM card (Jio, Vi, Airtel, BSNL, etc.) with sufficient balance and SMS pack (Optional)."
+            "Switch off the 3-phase power or remove all 3 fuses.",
+            "Use proper tools for fuse removal and wiring. Hire a professional if unsure."
         ]
     },
     {
         stepNumber: 3,
-        title: "Power On",
+        title: "Connect Wires",
+        description: [
+            "Connect 3 yellow wires to the starter terminals (R, Y, B) as per the diagram.",
+            "Connect 2 green wires to the power-on button.",
+            "Connect 2 red wires to the red button series as per the diagram."
+        ]
+    },
+    {
+        stepNumber: 4,
+        title: "Install Antenna & Insert SIM",
+        description: [
+            "Fix the antenna away from high-voltage wires.",
+            "Insert an active SIM card (Jio, Vi, Airtel, BSNL) with SMS pack."
+        ]
+    },
+    {
+        stepNumber: 5,
+        title: "Power On & Check LEDs",
         description: [
             "Switch on the power supply.",
-            "Check the power LED: Power LED is solid green - Power Ok, Power LED blinking green - Low voltage detected.",
-            "Check the Phase LED: Phase LED Solid green - 3 Phase Ok, Phase LED blinking green - Phase failure detected.",
-            "Check the NET LED: NET LED Solid green - Network is registered, NET LED OFF - No network (Check the sim card or antenna).",
-            "STA LED: STA LED solid green - Water Pump running, STA LED OFF - Water Pump off.",
-            "Wait for the network LED to become stable (shows connectivity).",
-            "After powering on, wait for 40-50 seconds for booting up the device before using it for operations."
+            "Check Power LED: Green - Power OK, Blinking Green - Low Voltage.",
+            "Check Phase LED: Green - 3-Phase OK, Blinking Green - Phase Failure.",
+            "Check Network LED: Green - Network Registered, OFF - No Network.",
+            "STA LED: Green - Pump Running, OFF - Pump Off.",
+            "Wait 40-50 seconds for boot-up before using the device."
         ]
     }
 ];
+
+
 
 // Function to dynamically generate the installation steps
 function generateInstallationSteps(steps) {
