@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samadhan - Smart Motor Starter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --section-transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --dark-bg: #1a1a1a;
+            --accent: #6C63FF;
+            --text-primary: #ffffff;
+            --text-secondary: #8c8c8c;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 4rem 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: var(--section-transition);
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .rounded-img-container {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            transition: var(--section-transition);
+            border: 2px solid #333333;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+        .rounded-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: var(--section-transition);
+        }
+
+        .section.active .rounded-img-container img {
+            transform: scale(1.1);
+        }
+
+        .hero-content {
+            padding: 2rem;
+        }
+
+        h1.display-4 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #ffffff, #a5a5a5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        .cta-buttons .btn {
+            padding: 1.2rem 2.5rem;
+            margin: 1rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--accent), #857BFF);
+            color: white !important;
+        }
+
+        .btn-outline-primary {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background: var(--accent);
+            color: white !important;
+        }
+
+        .stats-section {
+            background: #252525;
+            border-radius: 2rem;
+            margin: 2rem;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--accent), #857BFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1.display-4 {
+                font-size: 3rem;
+            }
+
+            .lead {
+                font-size: 1.2rem;
+            }
+
+            .rounded-img-container {
+                height: 300px;
+                margin-bottom: 2rem;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                margin: 0.5rem 0;
+                padding: 1rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="section container-fluid" id="hero">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 order-2">
+                <div class="hero-content">
+                    <h1 class="display-4 mb-4">SAMADHAN</h1>
+                    <p class="lead mb-4">Control your motor anytime, anywhere — just with a phone call.</p>
+                    <div class="cta-buttons">
+                        <a href="#features" class="btn btn-primary">Explore Features</a>
+                        <a href="#buy" class="btn btn-outline-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1">
+                <div class="rounded-img-container">
+                    <img src="../card2.png" alt="Samadhan Motor Starter">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section container-fluid" id="stats">
+        <div class="row align-items-center stats-section">
+            <div class="col-md-6">
+                <div class="rounded-img-container">
+                    <img src="../card1.png" alt="Performance Stats">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-4">
+                    <h2 class="mb-5 h1" style="color: var(--text-primary);">BY THE NUMBERS</h2>
+                    <div class="stat-item mb-5">
+                        <div class="stat-number">120K</div>
+                        <p class="text-muted" style="color: var(--text-secondary) !important;">Active Installations</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <p class="text-muted" style="color: var(--text-secondary) !important;">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                const target = $($(this).attr('href'));
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, 'easeInOutExpo');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

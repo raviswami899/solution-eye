@@ -19,6 +19,10 @@
     transform: scale(1.1);
 }
 
+.feature-item:hover .feature-value{
+    color: #d46ae2;
+}
+
 #features {
     height: 100vh;
     background-color: #121212;

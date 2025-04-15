@@ -19,7 +19,7 @@ const features = [
           <div class="icon-circle me-3">
             <i class="fas fa-check"></i>
           </div>
-          <span class="text-light">${feature}</span>
+          <span class="feature-value">${feature}</span>
         </div>
       `;
       $container.append(html);

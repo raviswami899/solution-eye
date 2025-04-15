@@ -50,3 +50,10 @@
         opacity: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .hero h1 {
+      font-size: clamp(2.5rem, 10vw, 6rem); /* optimized for mobile and tablets */
+      letter-spacing: -0.02em;
+    }
+  }
